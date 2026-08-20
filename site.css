@@ -101,7 +101,7 @@ button { font: inherit; }
 
 main { position: relative; padding: 2.5rem 0 4.5rem; }
 h1, h2, h3, h4 { margin: 0 0 0.6em; color: var(--text); font-family: var(--mono); line-height: 1.18; letter-spacing: -0.035em; }
-h1 { font-size: clamp(2.4rem, 4vw, 4.8rem); }
+h1 { font-size: clamp(2.2rem, 3.6vw, 3.85rem); }
 h2 { font-size: clamp(1.4rem, 2vw, 2rem); }
 h3 { font-size: clamp(1rem, 1.15vw, 1.25rem); }
 p { margin: 0 0 1rem; }
@@ -111,7 +111,7 @@ p { margin: 0 0 1rem; }
 .muted { color: var(--muted); }
 
 .hero { display: grid; grid-template-columns: minmax(250px, 0.78fr) minmax(360px, 1.2fr) 220px; gap: 1.4rem; align-items: center; min-height: 330px; margin-bottom: 2rem; }
-.hero-copy h1 { margin-bottom: 0.85rem; }
+.hero-copy h1 { margin-bottom: 0.85rem; font-size: clamp(2.25rem, 3.4vw, 3.75rem); }
 .hero-copy h1::after { display: inline-block; width: 0.28em; height: 0.8em; margin-left: 0.13em; content: ''; background: var(--green); box-shadow: 0 0 18px rgba(40, 240, 160, 0.65); transform: translateY(0.05em); }
 .hero-copy .lede { margin-bottom: 1.25rem; }
 .hero-subline { display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -121,8 +121,8 @@ p { margin: 0 0 1rem; }
 .chip.violet { border-color: rgba(179, 109, 255, 0.42); color: var(--violet); background: var(--violet-soft); }
 .chip-dot, .status-dot { width: 7px; height: 7px; display: inline-block; flex: 0 0 auto; border-radius: 50%; background: currentColor; box-shadow: 0 0 10px currentColor; }
 
-.scene-frame { position: relative; min-height: 300px; overflow: hidden; border: 1px solid rgba(46, 103, 119, 0.5); border-radius: var(--radius-lg); background: radial-gradient(circle at 50% 50%, rgba(12, 111, 111, 0.12), transparent 64%), rgba(2, 11, 19, 0.42); box-shadow: inset 0 0 60px rgba(9, 89, 112, 0.08), var(--shadow); }
-.scene-frame::after { position: absolute; inset: 0; content: ''; pointer-events: none; background: radial-gradient(circle at 50% 55%, transparent 0 38%, rgba(2, 8, 14, 0.5) 100%); }
+.scene-frame { position: relative; min-height: 300px; overflow: hidden; border: 1px solid rgba(46, 103, 119, 0.34); border-radius: var(--radius-lg); background: radial-gradient(circle at 50% 54%, rgba(12, 111, 111, 0.14), transparent 68%), rgba(2, 11, 19, 0.18); box-shadow: inset 0 0 80px rgba(9, 89, 112, 0.1); }
+.scene-frame::after { position: absolute; inset: 0; content: ''; pointer-events: none; background: radial-gradient(circle at 50% 55%, transparent 0 48%, rgba(2, 8, 14, 0.25) 100%); }
 .scene-frame canvas { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
 .scene-fallback { position: absolute; inset: auto 1rem 1rem; z-index: 3; display: none; padding: 0.5rem 0.65rem; border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--muted); background: var(--surface-strong); font: 0.7rem var(--mono); }
 .scene-fallback-visible .scene-fallback { display: block; }
