@@ -36,6 +36,7 @@ body {
 	min-height: 100vh;
 	margin: 0;
 	background:
+		url('./assets/scene-bg.png') center top / cover fixed no-repeat,
 		radial-gradient(900px 500px at 62% 12%, rgba(13, 90, 105, 0.16), transparent 68%),
 		radial-gradient(700px 360px at 10% 35%, rgba(11, 55, 90, 0.16), transparent 72%),
 		var(--bg);
@@ -45,7 +46,6 @@ body {
 	text-rendering: optimizeLegibility;
 	overflow-x: hidden;
 }
-.page-scene-background { position: fixed; inset: 0; z-index: 0; pointer-events: none; background: url('./assets/scene-bg.png') center top / cover no-repeat; }
 body::before {
 	position: fixed;
 	inset: 0;
@@ -96,7 +96,6 @@ p { margin: 0 0 1rem; }
 .chip.violet { border-color: rgba(179, 109, 255, 0.42); color: var(--violet); background: var(--violet-soft); }
 .chip-dot, .status-dot { width: 7px; height: 7px; display: inline-block; flex: 0 0 auto; border-radius: 50%; background: currentColor; box-shadow: 0 0 10px currentColor; }
 
-.scene-frame { position: relative; min-height: 300px; overflow: hidden; border: 1px solid rgba(46, 103, 119, 0.34); border-radius: var(--radius-lg); background: transparent; box-shadow: inset 0 0 80px rgba(9, 89, 112, 0.1); }
 .scene-label { position: absolute; z-index: 2; color: var(--cyan); font: 0.58rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
 .scene-label.systems { left: 9%; bottom: 27%; }
 .scene-label.reliability { right: 14%; top: 16%; color: var(--green); }
@@ -154,14 +153,12 @@ p { margin: 0 0 1rem; }
 
 @media (max-width: 1000px) { .hero { grid-template-columns: minmax(240px, 0.9fr) minmax(340px, 1.1fr); } .hero > .hud-panel { grid-column: 1 / -1; } }
 @media (max-width: 720px) {
-	.page-scene-background { background-size: auto 100%; background-position: 58% top; }
 	.site-shell { width: min(100% - 1.2rem, 1260px); }
 	.header-inner { align-items: flex-start; padding: 0.7rem 0; }
 	.header-actions { gap: 0.4rem; }
 	main { padding: 2rem 0 3.5rem; }
 	.hero { grid-template-columns: 1fr; gap: 1rem; min-height: auto; }
 	.hero > .hud-panel { grid-column: auto; }
-	.scene-frame { min-height: 245px; }
 	.section-heading { display: block; }
 	.section-heading p { margin-top: 0.4rem; }
 	.timeline-item { grid-template-columns: 24px minmax(0, 1fr); gap: 0.45rem; }
