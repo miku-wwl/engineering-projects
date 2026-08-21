@@ -1,19 +1,7 @@
 (function () {
   var root = document.documentElement;
-  var toggle = document.querySelector('[data-theme-toggle]');
-  var stored = null;
-  try { stored = localStorage.getItem('theme'); } catch (_) {}
-
-  function setTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    if (toggle) toggle.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
-    try { localStorage.setItem('theme', theme); } catch (_) {}
-  }
-
-  setTheme(stored || 'dark');
-  if (toggle) toggle.addEventListener('click', function () {
-    setTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
-  });
+  root.setAttribute('data-theme', 'dark');
+  try { localStorage.setItem('theme', 'dark'); } catch (_) {}
 
   function updateClock() {
     var now = new Date();
